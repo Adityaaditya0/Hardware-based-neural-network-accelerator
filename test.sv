@@ -1,4 +1,4 @@
-`include "nn_env.sv"
+`include "environment.sv"
 
 class nn_test;
 

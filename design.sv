@@ -114,7 +114,8 @@ endmodule
    TOP MODULE (FULLY SYNTHESIZABLE)
    ===================================================== */
 module nn_accelerator_top (
-    
+    input  wire               clk,
+    input  wire               rst_n,
     input  wire               start,
 
     input  wire signed [7:0]  act  [0:3],
@@ -129,6 +130,8 @@ module nn_accelerator_top (
     wire signed [31:0] mac_sum;
 
     controller ctrl (
+        .clk(clk),
+        .rst_n(rst_n),
         .start(start),
         .compute_en(compute_en),
         .done(done)

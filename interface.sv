@@ -1,5 +1,6 @@
 interface nn_if();
 
+    logic clk;
     logic rst_n;
     logic start;
 
